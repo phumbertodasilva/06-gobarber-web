@@ -10,7 +10,7 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 
 import { Background, Container, Content } from './styles';
-import getValidationErros from '../../utils/getValidationErros';
+import getValidationErrors from '../../utils/getValidationErrors';
 
 const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
@@ -31,7 +31,7 @@ const SignUp: React.FC = () => {
         abortEarly: false,
       });
     } catch (e) {
-      const errors = getValidationErros(e);
+      const errors = getValidationErrors(e);
 
       formRef.current?.setErrors(errors);
     }
